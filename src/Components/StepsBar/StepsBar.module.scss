@@ -1,0 +1,39 @@
+@import '/src/scss/variables';
+
+
+.stepsScrollbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  margin-bottom: 75px;
+
+  @media (min-width: 768px) {
+    gap: 25px
+  }
+  
+  li {
+    height: 5px;
+    width: 100%;
+    flex: 1;
+    opacity: .15;
+    background-color: $primary;
+  }
+
+  .active {
+    opacity: 1;
+    position: relative;
+    transition: all .2s ease-in;
+    
+    &:before {
+      content: '';
+      height: 5px;
+      background-color: $primary;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1600px;
+      transition: all .2s ease-in;
+    }
+  }
+}

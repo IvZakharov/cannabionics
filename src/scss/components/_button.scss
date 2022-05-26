@@ -1,0 +1,47 @@
+@import '../variables';
+
+.button {
+  padding: 14px 10px;
+  min-width: 180px;
+  border-radius: 5px;
+  background-color: $primary;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 110.52%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+
+  svg {
+    margin-right: 10px;
+    transform: translateY(1px);
+
+    path {
+      transition: all .2s ease-in-out;
+    }
+  }
+  
+  &:hover {
+    background-color: darken($primary, 10);
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: $primary;
+    text-decoration: underline;
+    font-size: 17px;
+    line-height: 19px;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

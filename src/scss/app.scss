@@ -1,0 +1,62 @@
+@import './variables';
+@import './libs/normalize';
+@import './components/all';
+
+body {
+  background-color: $background;
+}
+
+#root {
+  height: 100%;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1600px;
+
+  @media (min-width: 1200px) {
+    padding: 0 60px;
+  }
+  
+  @media (min-width: 1440px) {
+    padding: 0 120px;
+  }
+}
+
+.content {
+  background-color: #fff; 
+  padding: 50px 0;
+  min-height: 100%;
+  border-radius: 30px;
+
+}
+
+.App {
+  height: 100%;
+
+}
+
+
+

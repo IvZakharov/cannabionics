@@ -11,7 +11,7 @@ function PackageSelection() {
       <h2 className={`${styles.title} mb-60`}>Here’s your action package:</h2>
 
       <div className={`${styles.buttons} mb-60`}>
-        <Link to="/action-plan" className={styles.button}>
+        <Link to="/cannabionics/action-plan" className={styles.button}>
           <h3 className="mb-50">Action plan</h3>
           <img src={segment} alt="" />
         </Link>

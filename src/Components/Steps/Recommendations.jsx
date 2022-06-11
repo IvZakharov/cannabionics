@@ -79,7 +79,7 @@ function Recommendations() {
         </div>
 
         <div className={styles.prevNextBtns}>
-          <Link to="package-selection" className="button ">
+          <Link to="/cannabionics/package-selection" className="button ">
             GET FULL ACTION PACKAGE
           </Link>
           <button className="button button--transparent button--short">

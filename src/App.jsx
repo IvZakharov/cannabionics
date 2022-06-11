@@ -14,9 +14,9 @@ function App() {
       <div className="content">
         <div className="container">
           <Routes>
-            <Route path="/" element={<PlansForm />} />
-            <Route path="package-selection" element={<PackageSelection />} />
-            <Route path="/action-plan" element={<ActionPlan />} />
+            <Route path="/cannabionics/" element={<PlansForm />} />
+            <Route path="/cannabionics/package-selection" element={<PackageSelection />} />
+            <Route path="/cannabionics/action-plan" element={<ActionPlan />} />
           </Routes>
         </div>
       </div>

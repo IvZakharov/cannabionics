@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={`${styles.headerWrapper} container`}>
-        <Link to="/" className={styles.logo}>
+        <Link to="cannabionics/" className={styles.logo}>
           <img src={logoSvg} alt="logo icon" width={18} height={18} />
           <span>CANNABIONICS®</span>
         </Link>

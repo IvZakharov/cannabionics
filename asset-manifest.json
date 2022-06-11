@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cannabionics/static/css/main.28265902.css",
-    "main.js": "/cannabionics/static/js/main.dad35887.js",
+    "main.js": "/cannabionics/static/js/main.0a4233ff.js",
     "static/media/user.png": "/cannabionics/static/media/user.033f785b684edbe3bb7c.png",
     "static/media/expand.svg": "/cannabionics/static/media/expand.4af2b0d499e1f7452eac6c318623b794.svg",
     "static/media/people.svg": "/cannabionics/static/media/people.2874c682c69aa651f6458f04c63ffd50.svg",
@@ -10,10 +10,10 @@
     "static/media/segment.svg": "/cannabionics/static/media/segment.9837718e8421a00bfee9eaf1526cd923.svg",
     "static/media/checked.svg": "/cannabionics/static/media/checked.7ac734fb7198b34d77ca.svg",
     "main.28265902.css.map": "/cannabionics/static/css/main.28265902.css.map",
-    "main.dad35887.js.map": "/cannabionics/static/js/main.dad35887.js.map"
+    "main.0a4233ff.js.map": "/cannabionics/static/js/main.0a4233ff.js.map"
   },
   "entrypoints": [
     "static/css/main.28265902.css",
-    "static/js/main.dad35887.js"
+    "static/js/main.0a4233ff.js"
   ]
 }

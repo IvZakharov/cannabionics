@@ -1,15 +1,16 @@
 import styles from './Header.module.scss';
 import logoSvg from './img/logo.svg';
 import userImg from './img/user.png';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <header className={styles.header}>
       <div className={`${styles.headerWrapper} container`}>
-        <div className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           <img src={logoSvg} alt="logo icon" width={18} height={18} />
           <span>CANNABIONICS®</span>
-        </div>
+        </Link>
         <nav className={styles.mainNav}>
           <ul>
             <li>HOW IT WORKS</li>

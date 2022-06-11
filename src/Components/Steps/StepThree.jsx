@@ -1,10 +1,16 @@
-import styles from './PlansForm.module.scss';
+import styles from './StepsBlock.module.scss';
 import React from 'react';
 import Dropdown from '../Dropdown/Dropdown';
+import Range from '../Dropdown/Range';
+import RangeTwo from '../Dropdown/RangeTwo';
 
-function TellUs() {
+import { useDispatch } from 'react-redux';
+import { countPlus, countMinus } from '../../redux/slices/stepsCountSlice';
+
+function StepThree() {
+  const dispatch = useDispatch();
   const dropdownData = [
-    ['California(Los Angeles)', 'Washington(Seattle)'],
+    ['Seattle', 'Washington'],
 
     ['Males', 'Females'],
 
@@ -24,9 +30,10 @@ function TellUs() {
   ];
 
   return (
-    <div className={styles.show}>
+    <div className={styles.stepsBlock}>
       <h1 className={`${styles.title} mb-100`}>Tell us a bit more about your situation:</h1>
-      <div className={styles.textBlock}>
+
+      <div className={`${styles.textBlock} mb-100`}>
         <p>I am a </p>
         <span>Founder</span>
         <p> of a </p>
@@ -35,18 +42,24 @@ function TellUs() {
         <Dropdown dropdownList={dropdownData[0]} />
         <p> targeted at </p>
         <Dropdown dropdownList={dropdownData[1]} />
-        <p>, </p>
         <Dropdown dropdownList={dropdownData[2]} />
-        <p>, MYI &#62; </p>
-        <span>$45,000-$75,000</span>
-        <p> for </p>
-        <span>Anti-anxiety</span>
+        <p>average monthly salary =</p>
+        <Range />
         <p> with </p>
-        <span>$10-50</span>
+        <RangeTwo />
         <p> price per unit.</p>
+      </div>
+
+      <div className={styles.prevNextBtns}>
+        <button onClick={() => dispatch(countMinus())} className="button">
+          &#60; back
+        </button>
+        <button onClick={() => dispatch(countPlus())} className="button">
+          next &#62;
+        </button>
       </div>
     </div>
   );
 }
 
-export default TellUs;
+export default StepThree;

@@ -7,6 +7,7 @@
   span {
     cursor: pointer;
     white-space: nowrap;
+    color: $primary;
   }
 
   ul {
@@ -51,5 +52,30 @@
       color: $primary;
       background-color: rgba($primary, 0.1);
     }
+  }
+}
+
+.range {
+  display: inline-block;
+  position: relative;
+  
+  span {
+    color: $primary;
+  }
+  
+  .rangeBox {
+    width: 200px;
+    max-width: 200px;
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    padding-bottom: 7px;
+    padding-top: 10px;
+    padding-right: 35px;
+    padding-left: 25px;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 9;
   }
 }

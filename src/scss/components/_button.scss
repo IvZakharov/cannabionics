@@ -1,7 +1,7 @@
 @import '../variables';
 
 .button {
-  padding: 14px 10px;
+  padding: 14px 70px;
   min-width: 180px;
   border-radius: 5px;
   background-color: $primary;
@@ -15,10 +15,15 @@
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
+
   line-height: 110.52%;
   text-align: center;
   letter-spacing: 0.03em;
   color: #FFFFFF;
+
+  &:disabled {
+    opacity: .5;
+  }
 
   svg {
     margin-right: 10px;
@@ -29,19 +34,30 @@
     }
   }
   
-  &:hover {
+  &:hover:enabled {
     background-color: darken($primary, 10);
+  }
+
+  &--short {
+    padding: 14px 35px;
   }
 
   &--transparent {
     background-color: transparent;
     color: $primary;
-    text-decoration: underline;
-    font-size: 17px;
-    line-height: 19px;
-
-    &:hover {
-      background-color: transparent;
+    border: 1px solid $primary;
+    
+    &:disabled {
+      opacity: .5;
     }
+
+    &:hover:enabled {
+      background-color: $primary;
+      color: white;
+    }
+  }
+
+  &--black {
+    background-color: black;
   }
 }

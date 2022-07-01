@@ -12,6 +12,7 @@ import StepThree from '../Components/Steps/StepThree';
 import StepFour from '../Components/Steps/StepFour';
 import StepFive from '../Components/Steps/StepFive';
 import StepSix from '../Components/Steps/StepSix';
+import StepSeven from '../Components/Steps/StepSeven'
 import Recommendations from '../Components/Steps/Recommendations';
 
 function PlansForm() {
@@ -24,7 +25,7 @@ function PlansForm() {
 
   return (
     <div className={styles.plansForm}>
-      <StepsBar step={step} stepCount={7} />
+      <StepsBar step={step} stepCount={8} />
 
       <div className={styles.formContent}>
         {(() => {
@@ -42,6 +43,8 @@ function PlansForm() {
             case 5:
               return <StepSix />;
             case 6:
+              return <StepSeven />;
+            case 7:
               return <Recommendations />;
             default:
               return <div></div>;

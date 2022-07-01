@@ -1,14 +1,19 @@
 import styles from './StepsBlock.module.scss';
-import React from 'react';
+import {useEffect} from 'react';
 import Dropdown from '../Dropdown/Dropdown';
 import Range from '../Dropdown/Range';
 import RangeTwo from '../Dropdown/RangeTwo';
+import { useSelector } from 'react-redux';
 
 import { useDispatch } from 'react-redux';
 import { countPlus, countMinus } from '../../redux/slices/stepsCountSlice';
+import {addItems} from '../../redux/slices/recomendationsSlice';
+
 
 function StepThree() {
   const dispatch = useDispatch();
+
+
   const dropdownData = [
     ['Seattle', 'Washington'],
 
@@ -29,6 +34,8 @@ function StepThree() {
     ],
   ];
 
+
+
   return (
     <div className={styles.stepsBlock}>
       <h1 className={`${styles.title} mb-100`}>Tell us a bit more about your situation:</h1>
@@ -37,16 +44,16 @@ function StepThree() {
         <p>I am a </p>
         <span>Founder</span>
         <p> of a </p>
-        <Dropdown dropdownList={dropdownData[3]} />
+        <Dropdown title={'Role'} dropdownList={dropdownData[3]} />
         <p> brand in </p>
-        <Dropdown dropdownList={dropdownData[0]} />
+        <Dropdown title={'City'} dropdownList={dropdownData[0]} />
         <p> targeted at </p>
-        <Dropdown dropdownList={dropdownData[1]} />
-        <Dropdown dropdownList={dropdownData[2]} />
+        <Dropdown title={'Gender'} dropdownList={dropdownData[1]} />
+        <Dropdown title={'Age'} dropdownList={dropdownData[2]} />
         <p>average monthly salary =</p>
-        <Range />
+        <Range title={'monthSalary'} />
         <p> with </p>
-        <RangeTwo />
+        <RangeTwo title={'pricePerUnit'} />
         <p> price per unit.</p>
       </div>
 

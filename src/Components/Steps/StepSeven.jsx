@@ -5,7 +5,7 @@ import Dropdown from '../Dropdown/Dropdown';
 import { useDispatch } from 'react-redux';
 import { countPlus, countMinus } from '../../redux/slices/stepsCountSlice';
 
-function StepSix() {
+function StepSeven() {
   const dispatch = useDispatch();
   return (
     <div className={styles.stepsBlock}>
@@ -28,7 +28,6 @@ function StepSix() {
           <li>
             <span className={styles.name}>Planning</span>
             <span className={styles.value}>
-              {' '}
               <Dropdown title={'Planing'} dropdownList={['1 year', '2 year', '3 year', '4 year', '5 year']} />
             </span>
           </li>
@@ -47,4 +46,4 @@ function StepSix() {
   );
 }
 
-export default StepSix;
+export default StepSeven;

@@ -2,7 +2,7 @@ import styles from './Dropdown.module.scss';
 import React from 'react';
 import Slider from '@mui/material/Slider';
 
-function RangeTwo() {
+function RangeTwo({title}) {
   const [isOpen, setIsOpen] = React.useState(false);
   const dropdownRef = React.useRef();
 

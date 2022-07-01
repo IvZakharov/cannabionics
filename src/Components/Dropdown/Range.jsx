@@ -1,16 +1,27 @@
 import styles from './Dropdown.module.scss';
 import React from 'react';
 import Slider from '@mui/material/Slider';
+import {addItems} from "../../redux/slices/recomendationsSlice";
+import {useDispatch} from "react-redux";
 
-function Range() {
+function Range({title}) {
   const [isOpen, setIsOpen] = React.useState(false);
   const dropdownRef = React.useRef();
+  const dispatch = useDispatch();
 
   const [value, setValue] = React.useState(3000);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  React.useEffect(()=> {
+    const someAction = {
+      type: title,
+      payload: value
+    }
+    dispatch(addItems(someAction))
+  }, [value])
 
   React.useEffect(() => {
     const handleClickOutside = (event) => {

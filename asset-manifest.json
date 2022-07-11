@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cannabionics/static/css/main.107ee664.css",
-    "main.js": "/cannabionics/static/js/main.ffbfb11e.js",
+    "main.css": "/cannabionics/static/css/main.80033e85.css",
+    "main.js": "/cannabionics/static/js/main.07ea86f0.js",
     "static/media/user.png": "/cannabionics/static/media/user.033f785b684edbe3bb7c.png",
     "static/media/expand.svg": "/cannabionics/static/media/expand.4af2b0d499e1f7452eac6c318623b794.svg",
     "static/media/people.svg": "/cannabionics/static/media/people.2874c682c69aa651f6458f04c63ffd50.svg",
@@ -9,11 +9,11 @@
     "static/media/logo.svg": "/cannabionics/static/media/logo.7f6b9f01f9bde0977785e31650e849ec.svg",
     "static/media/segment.svg": "/cannabionics/static/media/segment.9837718e8421a00bfee9eaf1526cd923.svg",
     "static/media/checked.svg": "/cannabionics/static/media/checked.7ac734fb7198b34d77ca.svg",
-    "main.107ee664.css.map": "/cannabionics/static/css/main.107ee664.css.map",
-    "main.ffbfb11e.js.map": "/cannabionics/static/js/main.ffbfb11e.js.map"
+    "main.80033e85.css.map": "/cannabionics/static/css/main.80033e85.css.map",
+    "main.07ea86f0.js.map": "/cannabionics/static/js/main.07ea86f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.107ee664.css",
-    "static/js/main.ffbfb11e.js"
+    "static/css/main.80033e85.css",
+    "static/js/main.07ea86f0.js"
   ]
 }

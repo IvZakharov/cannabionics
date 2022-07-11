@@ -1,7 +1,6 @@
 import styles from './StepsBlock.module.scss';
-import Range from '../Dropdown/Range';
 import Dropdown from '../Dropdown/Dropdown';
-
+import RangeRadio from "../Dropdown/RangeRadio";
 import { useDispatch } from 'react-redux';
 import { countPlus, countMinus } from '../../redux/slices/stepsCountSlice';
 
@@ -9,27 +8,33 @@ function StepSix() {
   const dispatch = useDispatch();
   return (
     <div className={styles.stepsBlock}>
-      <h1 className={`${styles.title} mb-100`}>Input your data:</h1>
+      <h1 className={`${styles.title} mb-100`}>Goals:</h1>
       <div className={styles.inputData}>
         <ul>
           <li>
-            <span className={styles.name}>Objective</span>
+            <span className={styles.name}>Market Share</span>
             <span className={styles.value}>
-              Increase <Dropdown title={'Objective'} dropdownList={['Market Share', 'Value Share', 'Revenue']} />
+              <Dropdown title={'MarketShare'} dropdownList={['10%', '20%', '30%']} />
             </span>
           </li>
 
           <li>
-            <span className={styles.name}>Avaliable Budget</span>
+            <span className={styles.name}>Sales volume, untils</span>
             <span className={styles.value}>
-              <Range title={'AvalibleBudget'} />
+
+              <RangeRadio
+                title={'SalesVolumeUntils'}
+                list={['0', '1-5', '6-10', '11-15', '16-20', '25']}
+              />
             </span>
           </li>
           <li>
-            <span className={styles.name}>Planning</span>
+            <span className={styles.name}>Sales volume</span>
             <span className={styles.value}>
-              {' '}
-              <Dropdown title={'Planing'} dropdownList={['1 year', '2 year', '3 year', '4 year', '5 year']} />
+              <RangeRadio
+                title={'SalesVolume'}
+                list={['0', '1-5', '6-10', '11-15', '16-20', '25']}
+              />
             </span>
           </li>
         </ul>

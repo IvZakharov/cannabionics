@@ -1,7 +1,7 @@
 import styles from './StepsBlock.module.scss';
 import Range from '../Dropdown/Range';
 import Dropdown from '../Dropdown/Dropdown';
-
+import RangeRadio from '../Dropdown/RangeRadio';
 import { useDispatch } from 'react-redux';
 import { countPlus, countMinus } from '../../redux/slices/stepsCountSlice';
 
@@ -13,13 +13,6 @@ function StepSeven() {
       <div className={styles.inputData}>
         <ul>
           <li>
-            <span className={styles.name}>Objective</span>
-            <span className={styles.value}>
-              Increase <Dropdown title={'Objective'} dropdownList={['Market Share', 'Value Share', 'Revenue']} />
-            </span>
-          </li>
-
-          <li>
             <span className={styles.name}>Avaliable Budget</span>
             <span className={styles.value}>
               <Range title={'AvalibleBudget'} />
@@ -28,7 +21,7 @@ function StepSeven() {
           <li>
             <span className={styles.name}>Planning</span>
             <span className={styles.value}>
-              <Dropdown title={'Planing'} dropdownList={['1 year', '2 year', '3 year', '4 year', '5 year']} />
+              <Dropdown title={'Planing'} dropdownList={['1 year']} />
             </span>
           </li>
         </ul>

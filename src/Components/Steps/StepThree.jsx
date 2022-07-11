@@ -2,7 +2,7 @@ import styles from './StepsBlock.module.scss';
 import {useEffect} from 'react';
 import Dropdown from '../Dropdown/Dropdown';
 import Range from '../Dropdown/Range';
-import RangeTwo from '../Dropdown/RangeTwo';
+import RangeRadio from '../Dropdown/RangeRadio';
 import { useSelector } from 'react-redux';
 
 import { useDispatch } from 'react-redux';
@@ -17,9 +17,8 @@ function StepThree() {
   const dropdownData = [
     ['Seattle', 'Washington'],
 
-    ['Males', 'Females'],
+    ['Stoners', 'Estets', 'Glamour'],
 
-    ['21-25', '26-30', '31-40', '41-50', '51-70'],
 
     [
       'Beverage',
@@ -32,6 +31,8 @@ function StepThree() {
       'Topical',
       'Vapor Pens',
     ],
+
+
   ];
 
 
@@ -44,16 +45,15 @@ function StepThree() {
         <p>I am a </p>
         <span>Founder</span>
         <p> of a </p>
-        <Dropdown title={'Role'} dropdownList={dropdownData[3]} />
+        <Dropdown title={'Role'} dropdownList={dropdownData[2]} />
         <p> brand in </p>
         <Dropdown title={'City'} dropdownList={dropdownData[0]} />
         <p> targeted at </p>
-        <Dropdown title={'Gender'} dropdownList={dropdownData[1]} />
-        <Dropdown title={'Age'} dropdownList={dropdownData[2]} />
-        <p>average monthly salary =</p>
-        <Range title={'monthSalary'} />
+        <Dropdown title={'Segment'} dropdownList={dropdownData[1]} />
+
+
         <p> with </p>
-        <RangeTwo title={'pricePerUnit'} />
+        <Dropdown title={'pricePerUnit'} dropdownList={['10-20', '20-50', '50-100', 'Unknown']} />
         <p> price per unit.</p>
       </div>
 

@@ -109,7 +109,7 @@
       transition: all .2s ease-in-out;
       cursor: pointer;
 
-      &:hover {
+      &:hover:not(button:disabled) {
         opacity: 1;
       }
     }
@@ -266,6 +266,7 @@ color: #7732E4;
         display: flex;
         align-items: center;
         margin-bottom: 15px;
+        gap: 30px;
       }
 
       .name {
@@ -356,4 +357,12 @@ color: #7732E4;
     opacity: 0;
     transform: scale(2);
   } 
+}
+
+.radioControl {
+  .radioGroup {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }

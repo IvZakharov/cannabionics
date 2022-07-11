@@ -1,6 +1,6 @@
 import styles from './Dropdown.module.scss';
 import React from 'react';
-import {addItems} from "../../redux/slices/recomendationsSlice";
+import { addItems } from '../../redux/slices/recomendationsSlice';
 import SelectUnstyled from '@mui/base/SelectUnstyled';
 import { useDispatch } from 'react-redux';
 
@@ -29,20 +29,19 @@ function Dropdown({ title, dropdownList }) {
     };
   }, []);
 
-  React.useEffect(()=> {
+  React.useEffect(() => {
     const someAction = {
       type: title,
-      payload: dropdownList[value]
-    }
-    dispatch(addItems(someAction))
-  }, [value])
+      payload: dropdownList[value],
+    };
+    dispatch(addItems(someAction));
+  }, [value]);
 
   return (
-    <div ref={dropdownRef} className={styles.dropdown} >
+    <div ref={dropdownRef} className={styles.dropdown}>
       <span onClick={() => setIsOpen(!isOpen)}>{dropdownList[value]}</span>
       {isOpen && (
         <ul>
-
           {dropdownList.map((item, i) => (
             <li
               key={i}

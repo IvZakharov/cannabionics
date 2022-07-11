@@ -14,6 +14,7 @@ import StepFive from '../Components/Steps/StepFive';
 import StepSix from '../Components/Steps/StepSix';
 import StepSeven from '../Components/Steps/StepSeven'
 import Recommendations from '../Components/Steps/Recommendations';
+import StepEight from "../Components/Steps/StepEight";
 
 function PlansForm() {
   const step = useSelector((state) => state.stepsCount.count);
@@ -24,10 +25,10 @@ function PlansForm() {
   }, []);
 
   return (
-    <div className={styles.plansForm}>
-      <StepsBar step={step} stepCount={8} />
+    <div >
+      <StepsBar step={step} stepCount={9} />
 
-      <div className={styles.formContent}>
+      <div >
         {(() => {
           switch (step) {
             case 0:
@@ -45,6 +46,9 @@ function PlansForm() {
             case 6:
               return <StepSeven />;
             case 7:
+              return <StepEight />;
+
+            case 8:
               return <Recommendations />;
             default:
               return <div></div>;
